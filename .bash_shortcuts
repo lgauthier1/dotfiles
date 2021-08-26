@@ -1,22 +1,14 @@
 #!/bin/bash
 
 # Shortcuts
-alias p=python
-alias n=node
 alias g=git
-alias v=vim
 alias vi=vim
 alias rm='trash'
 alias l='less +F'
 alias ll='ls -AF'
 alias la='ls -lhAF'
-alias a='zz "atom -a ."'
 alias o='zz "open ."'
 alias s='zz "http-server -p80 --cors || python3 -m http.server 80"'
-alias d=docker
-alias dc=docker-compose
-alias dup='docker-compose up -d'
-dgo() { docker exec -it $(docker ps -f name=$@ -l -q) bash; }
 dkillall() { docker stop $(docker ps -aq) && docker rm $(docker ps -aq); }
 dcleanall() { docker rmi $(docker images -q) && docker volume rm $(docker volume ls -q); }
 

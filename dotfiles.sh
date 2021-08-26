@@ -55,7 +55,7 @@ EOL
   log "> Install Packages"
   touch -t $(date +%Y%m%d0000) ~/.dotfiles/.extra
   source ~/.dotfiles/.extra
-  brew install coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep watch
+  brew install pyebv coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep watch
   brew install bash bash-completion@2 git tmux htop fzf fd ripgrep diff-so-fancy
   brew install $TOOLS
   brew cask install $PROGRAMS

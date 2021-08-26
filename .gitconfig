@@ -33,3 +33,6 @@
   insteadOf = git://
 [include]
   path = ~/.gitextra
+[user]
+	name = Laurent
+	email = gauthier.lrnt@gmail.com
