@@ -1,5 +1,5 @@
 #!/bin/bash
-PROJECT=`pwd | rev | cut -d'/' -f 1 | rev`
+PROJECT=`pwd | rev | cut -d'/' -f 1 | rev | sed 's/\./DOT/'`
 SESSION="vscode-$PROJECT-`pwd | md5`"
 
 tmux attach-session -d -t $SESSION || tmux new-session -s $SESSION
