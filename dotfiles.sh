@@ -17,19 +17,16 @@ ls ~/.dotfiles &>/dev/null || {
   T="node git tmux htop coreutils fswatch fzf fd ripgrep"
   P="atom brave-browser microsoft-office speedtest-cli tree ripgrep"
   N="http-server prettier raw browser-sync"
-  A="autocomplete-paths file-icons language-vue minimap minimap-cursorline pigments prettier-atom teletype"
   read -p "Name: ($NAME) " NAME
   read -p "Email: ($EMAIL) " EMAIL
   read -p "Hostname: ($HOSTNAME) " HOSTNAME
   read -p "Tools: ($T) " TOOLS
   read -p "Programs: ($P) " PROGRAMS
   read -p "Packages - Node: ($N) " PACKAGES_NODE
-  read -p "Packages - Atom: ($A) " PACKAGES_ATOM
   [[ $HOSTNAME ]] || HOSTNAME=$(hostname)
   [[ $TOOLS ]] || TOOLS=$T
   [[ $PROGRAMS ]] || PROGRAMS=$P
   [[ $PACKAGES_NODE ]] || PACKAGES_NODE=$N
-  [[ $PACKAGES_ATOM ]] || PACKAGES_ATOM=$A
   cat > ~/.extra <<EOL
 NAME="$NAME"
 EMAIL="$EMAIL"
@@ -37,7 +34,6 @@ HOSTNAME="$HOSTNAME"
 TOOLS="$TOOLS"
 PROGRAMS="$PROGRAMS"
 PACKAGES_NODE="$PACKAGES_NODE"
-PACKAGES_ATOM="$PACKAGES_ATOM"
 EOL
   cat > ~/.gitextra <<EOL
 [user]
@@ -60,7 +56,6 @@ EOL
   brew install $TOOLS
   brew cask install $PROGRAMS
   npm install -g $PACKAGES_NODE
-  apm install $PACKAGES_ATOM
   echo /usr/local/bin/bash >> /etc/shells
   chsh -s /usr/local/bin/bash
   open ~/.dotfiles/Raw.terminal
