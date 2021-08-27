@@ -1,6 +1,6 @@
 #!/bin/bash
 
-reset="\[\e[0m\]"
+default_color="\[\e[0m\]"
 red="\[\e[31m\]"
 green="\[\e[32m\]"
 yellow="\[\e[33m\]"
@@ -8,6 +8,7 @@ blue="\[\e[34m\]"
 purple="\[\e[35m\]"
 cyan="\[\e[36m\]"
 
+# Warning need git in english
 prompt_git() {
   local git_status="$(git status 2> /dev/null)"
   if [[ $git_status ]]
@@ -57,10 +58,13 @@ timer() {
 }
 pre_timer() { [[ -z $flag_time ]] && return;unset flag_time;start_time=$(timer);history -a;history -c;history -r; }
 post_timer() { (($?)) && status="\e[31m✗\e[0m" || status="\e[32m✓\e[0m";duration=" in \e[33m$(timer $start_time)\e[0m";[[ $start_time ]] && echo -e "$status$duration\n";flag_time=1; }
+
 trap 'pre_timer' DEBUG
 PROMPT_COMMAND='post_timer'
 
-PS1="$yellow\u$reset"
-[[ $USER == "root" || $SSH_TTY ]] && PS1+=" at $red\h$reset"
-PS1+=" in $green\w$reset"
+
+#PS1="$purple[\t] $yellow\u$default_color"
+PS1="💻 $purple[\t] $default_color"
+[[ $USER == "root" || $SSH_TTY ]] && PS1+=" at $red\h$default_color"
+PS1+="$green\w$default_color"
 PS1+=" \$(prompt_git)\n$ "
