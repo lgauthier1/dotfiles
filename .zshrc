@@ -1,3 +1,9 @@
+alias cat=bat
+alias vi=nvim
+alias grep='grep --color'
+alias ll='exa -lh'
+alias la='ls -lhA'
+
 
 zstyle :omz:plugins:ssh-agent identities lgauthier1
 
@@ -33,6 +39,5 @@ if [ -z "$TMUX" ]
 then
     tmux attach -t TMUX || launch_tmux
 fi
-
 
 
