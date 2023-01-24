@@ -20,9 +20,13 @@ brew install --cask brave-browser
 brew install --cask visual-studio-code
 brew install --cask pgadmin4
 brew install --cask slack
+brew install nvm
 brew install fzf
 brew install tmux
 brew install htop
+brew install bat
+brew install neovim
+brew install exa
 
 ##################
 # Config terminal
@@ -49,3 +53,5 @@ sudo nvram SystemAudioVolume=" "
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+
