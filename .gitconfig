@@ -16,6 +16,7 @@
   excludesfile = ~/.gitexcludes
   hooksPath = ~/.githooks
   symlink = true
+	pager = cat
 [fetch]
   prune = true
 [help]
