@@ -20,13 +20,13 @@ brew install --cask brave-browser
 brew install --cask visual-studio-code
 brew install --cask pgadmin4
 brew install --cask slack
-brew install nvm
 brew install fzf
 brew install tmux
 brew install htop
 brew install bat
 brew install neovim
 brew install exa
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 ##################
 # Config terminal
