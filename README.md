@@ -8,6 +8,3 @@
 # Installation
 
 Clone repository in ~ folder and Run `bash install.sh`
-
-
-
