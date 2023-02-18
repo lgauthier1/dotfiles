@@ -13,6 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 plugins=(
     git
+    z
     ssh-agent
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -30,7 +31,6 @@ launch_tmux() {
     tmux split-window -v 
     tmux select-pane -t 1.1
     tmux attach -t TMUX
-    
 }
 
 if [ -z "$TMUX" ]
