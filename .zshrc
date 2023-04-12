@@ -1,3 +1,6 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 alias cat=bat
 alias vi=nvim
 alias grep='grep --color'
