@@ -26,18 +26,22 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 launch_tmux() {
-    tmux new-session -d -s TMUX
-    tmux select-window -t 1
-    tmux split-window -h 
-    tmux split-window -v 'htop'
-    tmux select-pane -t 1.1
-    tmux split-window -v 
-    tmux select-pane -t 1.1
-    tmux attach -t TMUX
+    if [ -z "$TMUX" ]
+    then
+        tmux new-session -d -s TMUX
+        tmux select-window -t 1
+        tmux split-window -h 
+        tmux split-window -v 'htop'
+        tmux select-pane -t 1.1
+        tmux split-window -v 
+        tmux select-pane -t 1.1
+        tmux attach -t TMUX
+    fi
 }
 
 if [ -z "$TMUX" ]
 then
+    echo 'launching tmux'
     tmux attach -t TMUX || launch_tmux
 fi
 
