@@ -26,7 +26,9 @@ brew install htop
 brew install bat
 brew install neovim
 brew install exa
+brew install pandoc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
 
 ##################
 # Config terminal
