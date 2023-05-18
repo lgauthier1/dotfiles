@@ -26,9 +26,7 @@ brew install htop
 brew install bat
 brew install neovim
 brew install exa
-brew install basictex # latek engine for pandoc
-brew install pandoc
-brew install asciidoctor
+npm install -g asciidoctor @asciidoctor/core asciidoctor-pdf asciidoctor-kroki
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 
