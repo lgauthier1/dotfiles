@@ -27,6 +27,7 @@ brew install htop
 brew install bat
 brew install neovim
 brew install exa
+brew install gh
 npm install -g asciidoctor @asciidoctor/core asciidoctor-pdf asciidoctor-kroki
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
