@@ -7,4 +7,4 @@
 
 # Installation
 
-Clone repository in ~ folder and Run `bash install.sh`
+Clone repository in ~ folder and Run `bash dotfiles/install.sh`
