@@ -20,6 +20,7 @@ brew install --cask brave-browser
 brew install --cask visual-studio-code
 brew install --cask pgadmin4
 brew install --cask slack
+brew install --cask docker
 brew install jq
 brew install fzf
 brew install tmux
