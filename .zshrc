@@ -26,7 +26,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 launch_tmux() {
-    if [ -z "$TMUX" ]
+    if ! tmux ls | grep -q "^TMUX:"
     then
         tmux new-session -d -s TMUX
         tmux select-window -t 1
