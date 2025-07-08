@@ -33,6 +33,7 @@ brew install diff-so-fancy
 brew install gnumeric 
 npm install -g asciidoctor @asciidoctor/core asciidoctor-pdf asciidoctor-kroki
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+brew install imagemagick
 
 
 ##################
